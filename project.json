@@ -1,0 +1,7 @@
+{
+	"name": "World of Andph",
+	"author": "Zefir Andph",
+	"description":"",
+	"data_texts": "./texts",
+	"data_structs": "./data"
+}
