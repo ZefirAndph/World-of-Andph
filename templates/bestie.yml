@@ -1,0 +1,45 @@
+category: creature         # nebo: race, location, item, lore_entry...
+subtype: beast             # (jen pro creature) bestie, humanoid, undead...
+id: wolf
+name: Vlk
+alignment: neutral
+description: |
+  Vlk je rychlý a vytrvalý predátor.
+
+stats:
+  strength: 8
+  agility: 14
+  endurance: 10
+  intelligence: 2
+  perception: 12
+  charisma: 6
+
+size: medium
+hit_points: 24
+speed: 12
+
+abilities:
+  - name: Pack Tactics
+    description: |
+      Vlk má výhodu na útok, pokud spojenci jsou poblíž.
+
+attacks:
+  - name: Bite
+    to_hit: +4
+    damage: "2d4+2 piercing"
+
+loot:
+  - item: wolf_pelt
+    chance: 0.8
+  - item: wolf_meat
+    chance: 0.5
+
+history:
+  - year: 203
+    description: |
+      Vlci byli ochočeni některými klany Severních barbarů.
+
+tags:
+  - predator
+  - forest
+  - pack_hunter
