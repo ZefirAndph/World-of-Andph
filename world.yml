@@ -1,21 +1,32 @@
 World: Andph
-units:
+Jednotky:
+  - id: base
+    to_base: 1
+    name: metr
+    symbol: m
   - id: elven_length
     name: Elfská stopa
     symbol: es
     to_base: 0.25
-
   - id: dwarven_length
     name: Trpasličí loket
     symbol: tl
     to_base: 0.32
-
   - id: meter
     name: Metr
     symbol: m
     to_base: 1.0
-    
   - id: sáh
     name: Sáh
     symbol: sh
     to_base: 1.8
+Reálie:
+  Statistiky:
+    - Síla (SIL)
+      bububu
+    - Obratnost (OBR)
+    - Zručnost (ZRU)
+    - Odolnost (ODO)
+    - Vůle (VUL)
+    - Inteligence (INT)
+    - Charisma (CHA)
