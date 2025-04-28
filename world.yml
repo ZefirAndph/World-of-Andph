@@ -1,4 +1,9 @@
-World: Andph
+World: 
+  name: Andph
+  units: Jednotky
+  realties: Reálie
+  timeline: Historie
+  
 Jednotky:
   - id: base
     to_base: 1
