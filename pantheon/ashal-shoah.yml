@@ -1,46 +1,48 @@
 class: god
 name: Ashal'shoah
+spec: Elfové
+tier: Sedmero
 pantheon: Sedm Otců
 alignment: ZkN
 titles:
   - Věčný plamen
   - Zrozený z popela
 avatar: Ohnivý Fénix
-domény:
+domains:
   - oheň
   - logika
   - slunce
   - elfové
-symboly:
+symbols:
   - fénix
   - rameno vah zatížené plamenem
-popis: |
+desc: |
   Druhý ze sedmera bohů otců. Stvořitel a patron elfího národa. 
-osobnost: |
-  Ashal'shoad je neúprosný ve své logice, víc než co jiného si cení pragmatismu
+personality: |
+  Ashal'shoah je neúprosný ve své logice, víc než co jiného si cení pragmatismu
   a schopnosti logických rozhodnutí.
-uctívání:
-  jak:
+worsip:
+  how:
     - Festival plamenů, během dní ohně.
     - Očištění hříšníků rituálním plamenem.
-  kým:
+  who:
     - elfové
-svátky:
-  - název: Festival plamenů
-    datum: "20.15. ~ 5.15."
-    popis: |
+events:
+  - name: Festival plamenů
+    date: "20.15. ~ 5.15."
+    desc: |
       Trvá deset dní, slaví elfové u sebe doma, v případě elfích zemí jej slaví
       přímo na náměstích. Hořící ohně a pálení pergamenů s motlidbami, odpustky
       a dalšími věcmi, které uctívače tíží.
-historie:
-  - rok: 2 E1
-    popis: |
+history:
+  - year: 2 E1
+    desc: |
       Ashal'shoah vytváří elfský národ.
-  - rok: 876 E1
-    popis: |
+  - year: 876 E1
+    desc: |
       Ashal'shoah vede elfský národ pryž od chrámu Pantheonu, následuje 
       založení Terthu.
-tagy:
+tags:
   - slunce
   - oheň
   - fénix

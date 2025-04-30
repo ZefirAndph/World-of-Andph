@@ -1,0 +1,51 @@
+class: god
+name: Vaeyr
+spec: Voda
+tier: Sedmero
+pantheon: Sedmero sil
+alignment: ZkN
+titles:
+  - Bůh moří
+avatar: Mořská panna, humanoidní oliheň
+domains:
+  - voda
+  - síla vůle
+  - moře
+symbols:
+  - ploutev
+  - vlna
+desc: |
+  Třetí ze sedmera přírodních sil. 
+personality: |
+  Vaeyr je otec i ztělesnění přírodní síly vody, jeji vůle a šíření, pomalého,
+  ale vytrvalého růstu. 
+worship:
+  how:
+    - Oběti shazované do moře
+    - Zkrápění vodou
+    - Obřadní lázně
+  who:
+    - námořníci
+    - pobřežní obyvatelstvo
+    - ostrovní národy
+events:
+  - name: Otevřené moře
+    date: "20.10. ~ 5.11."
+    desc: |
+      Trvá deset dní, během kterých vyráží národy na moře. Jsou časté mořské
+      bouře. Některé národy spojují plavbu na otevřeném (rozbouřeném) moři, 
+      jako formu zkoušky dospělosti.
+history:
+  - year: ?? E0
+    desc: |
+      Povrch světa je zaplaven oceánem a Vaeyr stanovuje chování vody.
+  - year: 879 E1
+    desc: |
+      Kult Vaeyra zmizel, mnoho věřících nalezeno na plážích nedaleko chrámu
+      pantheonu, když je mrtvé vyplavilo moře. Podle všeho se sami a při plném 
+      vědomí vrhli do jeho vln.
+tags:
+  - voda
+  - bůh
+  - moře
+  - síla vůle
