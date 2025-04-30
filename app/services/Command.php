@@ -86,7 +86,7 @@
 		private function Test(Arguments $args): void 
 		{
 			$wl = $this->m_service->Get(WorldLoader::class);
-			$obj = ($wl->GetAllData());
+			$obj = new SObject($wl->GetAllData());
 			Console::WriteLine($obj->World->name);
 		}
 

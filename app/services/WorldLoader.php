@@ -37,10 +37,9 @@
 		private function loadWorld(): object
 		{
 			$objWorld = new \stdClass;
-			// step 1 - load definition
 			$worldFile = $this->m_dir . DS . "world.yml";
 			if(file_exists($worldFile))
-				$objWorld->World = Yaml::parse(file_get_contents($worldFile));
+				$objWorld->World = Tools::ArrToObj(Yaml::parse(file_get_contents($worldFile)));
 
 			$objWorld->Gods = [];
 			$objWorld->Herbals = [];
@@ -76,7 +75,7 @@
 						break;
 				}
 			}
-			
+
 			return $objWorld;
 		}
 

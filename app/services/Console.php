@@ -6,14 +6,14 @@
 
 	class Console
 	{
-		public static function WriteLine(string $text, ...$params): void
+		public static function WriteLine(mixed $text, ...$params): void
 		{
-			echo Console::prepare($text, $params) . PHP_EOL;
+			echo Console::prepare((string)$text, $params) . PHP_EOL;
 		}
 
-		public static function Write(string $text, ...$params): void
+		public static function Write(mixed $text, ...$params): void
 		{
-			echo Console::prepare($text, $params);
+			echo Console::prepare((string)$text, $params);
 		}
 
 		public static function Set(...$params): void

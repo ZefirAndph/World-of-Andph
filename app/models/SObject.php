@@ -16,7 +16,7 @@
 		
 		public function __toString(): string
 		{
-			return "";
+			return "unk";
 		}
 
 		public function __get(string $key): mixed
@@ -28,7 +28,21 @@
 
 			return $this->m_data->$key;
 		}
-
+		public function __set(string $key, $value): void
+		{
+			$this->m_data->$key = $value;
+		}
+	
+		public function __isset(string $key): bool
+		{
+			return isset($this->m_data->$key);
+		}
+	
+		public function __unset(string $key): void
+		{
+			unset($this->m_data->$key);
+		}
+		
 		private function wrapObject(object $obj): object
 		{
 			if (is_array($obj)) {
