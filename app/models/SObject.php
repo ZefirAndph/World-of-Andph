@@ -8,6 +8,7 @@
 
 	class SObject
 	{
+		
 		private object $m_data;
 		public function __construct(object $source)
 		{
@@ -19,6 +20,9 @@
 			return "unk";
 		}
 
+		/**
+		 * Je to hezké, ale nevrací to hodnoty... jen SObject bez hodnot.
+		 */
 		public function __get(string $key): mixed
 		{
 			if (!property_exists($this->m_data, $key)) 
@@ -42,7 +46,7 @@
 		{
 			unset($this->m_data->$key);
 		}
-		
+
 		private function wrapObject(object $obj): object
 		{
 			if (is_array($obj)) {
