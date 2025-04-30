@@ -3,6 +3,9 @@
 	declare(strict_types=1);
 	namespace App\Services;
 
+	use App\Models\Arguments;
+	use App\Models\SObject;
+
 	class Command
 	{
 		// statické volání
@@ -17,6 +20,7 @@
 		private array $m_arguments;
 		private array $m_knownCommands;
 		private bool $m_terminate = false;
+		private Services $m_service;
 		public function __construct(string $cmd)
 		{
 			// Register known commands
@@ -28,9 +32,13 @@
 				'terminate' => [$this, 'Exit'],
 				'vypni to' => [$this, 'Exit'],
 				'test' => [$this, 'Test'],
+				'timeline' => [$this, 'TimeLine'],
+				'get races list' => [$this, 'GetRacesList'],
 			];
 
 			$this->m_command = $cmd;
+
+			$this->m_service = Services::BuildContainer();
 		}
 
 		public function Execute(): void
@@ -41,14 +49,14 @@
 				if(strpos($this->m_command . ' ', $command. ' ') === 0)
 				{
 					Console::Set(CmdColor::YELLOW);
-					call_user_func($callback, explode(" ", substr($this->m_command, strlen($command)+1)));
+					call_user_func($callback, new Arguments(substr($this->m_command, strlen($command)+1)));
 					$handled = true;
 				}
 			}
 
 			if(!$handled)
 			{
-				Console::WriteLine("Uknown command. Try 'help'.", CmdColor::RED);
+				Console::WriteLine("Uknown command ({$this->m_command}). Try 'help'.", CmdColor::RED);
 			}
 		}
 
@@ -58,7 +66,7 @@
 		}
 		
 		// Commands
-		private function CmdHelp(array $args): void
+		private function CmdHelp(Arguments $args): void
 		{
 			Console::Set(CmdColor::YELLOW, CmdColor::BLINK, CmdColor::BOLD);
 			Console::WriteLine("Actions: ");
@@ -70,13 +78,32 @@
 			Console::WriteLine("  vypni to  Exit application");
 		}
 
-		private function Exit(array $args): void 
+		private function Exit(Arguments $args): void 
 		{
 			$this->m_terminate = true;
 		}
 
-		private function Test(array $args): void 
+		private function Test(Arguments $args): void 
 		{
-			$world = new \App\Services\WorldLoader();
+			$wl = $this->m_service->Get(WorldLoader::class);
+			$obj = ($wl->GetAllData());
+			Console::WriteLine($obj->World->name);
+		}
+
+		private function GetRacesList(Arguments $args): void
+		{
+			$wl = $this->m_service->Get(WorldLoader::class);
+			foreach($wl->GetSpecies() as $spec)
+			{
+				Console::WriteLine("- {$spec->name}");
+				if($args->Has("cultures"))
+					foreach($spec->cultures as $cult)
+						Console::WriteLine("  - {$cult->name}" . ($args->Has("origin") ? " - {$cult->origin}" : "") );
+			}
+		}
+
+		private function Timeline(Arguments $args): void
+		{
+			
 		}
 	}

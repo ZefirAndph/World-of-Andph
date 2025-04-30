@@ -1,10 +1,31 @@
-Lidi:
-  Vzhled:
-    - Výška: 160-200 cm
-      Váha: 60-120 kg
-      Popis: Lidé jsou všestranní a přizpůsobiví, schopní přežít v různých podmínkách. Jsou známí svou vynalézavostí, rozmanitostí kultur a schopností spolupracovat i soupeřit.
-  Subkultury:
-    Císařští: Představují kulturně vyspělou společnost s důrazem na řád a tradice.
-    Jižané: Obyvatelé teplých krajin, známí svou pohostinností a uměním.
-    Nomádi: Kočovníci, kteří se přizpůsobují drsným podmínkám a žijí v souladu s přírodou.
-    Ostrované: Lidé z ostrovních oblastí, zruční námořníci a obchodníci.
+class: specie
+name: Člověk
+look:
+  - Výška: 160-200 cm
+    Váha: 60-120 kg
+    Popis: 
+      Lidé jsou všestranní a přizpůsobiví, schopní přežít v různých podmínkách.
+      Jsou známí svou vynalézavostí, rozmanitostí kultur a schopností
+      spolupracovat i soupeřit.
+cultures:
+  - name: Císařští
+    desc: Představují kulturně vyspělou společnost s důrazem na řád a tradice.
+    religion: Pantheon Středu
+    language: Stará obecná
+    origin: Císařství
+  - name: Jižané
+    desc: Obyvatelé teplých krajin, známí svou pohostinností a uměním.
+    religion: Pantheon Středu
+    language: Stará obecná
+    origin: Jižní pouště
+  - name: Nomádi
+    desc: Kočovníci, kteří se přizpůsobují drsným podmínkám a žijí v souladu 
+      s přírodou.
+    religion: Pantheon Středu
+    language: Stará obecná
+    origin: Jižní pouště
+  - name: Ostrované
+    desc: Lidé z ostrovních oblastí, zruční námořníci a obchodníci.
+    religion: Pantheon Středu
+    language: Stará obecná
+    origin: Ostrovní království

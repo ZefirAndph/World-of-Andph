@@ -1,6 +1,8 @@
-Elfové:
-  Subkultury:
-    Prastaří: 
+class: specie
+name: Elf
+cultures:
+  - name: Prastaří
+    desc:
       Prastaří jsou aristokraté původního věku, nositelé neotřesitelné 
       čistoty a prastarých tradic. Jejich nesmrtelnost není jen darem,
       ale i přísným závazkem - držet neomylné pravidlo, že slabost a kompromisy
@@ -10,7 +12,8 @@ Elfové:
       by se  odkláněl od vymezené cesty, a to nejen osobně, ale i pro celé elfí
       společenství. Jejich disciplína a pýcha jsou stejně nemilosrdné, jako je
       jejich úsilí zachovat dávnou dokonalost rasy.
-    Podsvětní: 
+  - name: Podsvětní
+    desc:
       Podsvětní elfové se zrodili z bezútěšné nutnosti přežít ve stínu
       války a zkázy. Zvolili cestu temnoty a touhou po moci, která je proměnila 
       fyzicky i duševně. Jejich vzhled nese známky nekompromisního přizpůsobení 
@@ -20,7 +23,8 @@ Elfové:
       rozšíření vlivu. Ať už jsou nesmrtelní či smrtelní, jejich životní cesta 
       je poznamenána neustálým bojem, nelítostností a neochvějným odhodláním 
       potlačit jakoukoli slabost.
-    Smrtelní: 
+  - name: Smrtelní
+    desc:
       Smrtelní představují elitu nové éry, v níž každý okamžik života musí být 
       zbojován s přesností ostrého meče. Ačkoliv jejich osud je neodvratně 
       spojen s pomíjivostí, odmítají jakýkoli projev slabosti. Jejich životy 
@@ -30,7 +34,8 @@ Elfové:
       jistotou. Ve světě, kde čas tiká příliš rychle, se každá vteřina počítá 
       a každý čin – ostrý, přímý a nelítostný – posiluje jejich postavení jako
       strážců elfy vymezeného dědictví.
-    Vyhnanci: 
+  - name: Vyhnanci
+    desc:
       Vyhnanci jsou elfové, kteří se ocitli na okraji svého vlastního lidu. 
       Jsou to ti, které společnost vyhnala – nebo je nedokázala zabít – a ti, 
       kteří odešli včas, aby se vyhnuli neúprosné disciplíně a nemilosrdné 
@@ -44,13 +49,13 @@ Elfové:
       Vyhnanci tak představují dvojí tvář odpadníků – rebelů, kteří odmítli
       bezpodmínečnou poslušnost, a zároveň trýznivou připomínku minulosti, 
       kterou se jejich společenství snaží neustále ze své paměti vymazat.
-  Vzhled:
-    - Výška: 175-200 cm
-      Váha: 50-90 kg
-      Popis: 
-        Jsou huběnější, lehčí a atletičtěji stavění než lidé. Jejich samotná 
-        existence je protkaná silnou magií. To pro ně znamená značnou 
-        přirozenost jejího využívání, ale také vyšší míru zranitelnosti, 
-        neboť jsou citlivý na změny v jejím jemném tkanivu. Většina podsvětních
-        elfů je speciálně cvičena, aby tato zranitelnost byla co nejméně 
-        znatelná.
+Vzhled:
+  - Výška: 175-200 cm
+    Váha: 50-90 kg
+    Popis: 
+      Jsou huběnější, lehčí a atletičtěji stavění než lidé. Jejich samotná 
+      existence je protkaná silnou magií. To pro ně znamená značnou 
+      přirozenost jejího využívání, ale také vyšší míru zranitelnosti, 
+      neboť jsou citlivý na změny v jejím jemném tkanivu. Většina podsvětních
+      elfů je speciálně cvičena, aby tato zranitelnost byla co nejméně 
+      znatelná.

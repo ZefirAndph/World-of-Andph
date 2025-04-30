@@ -4,10 +4,11 @@
 	use App\Services\Console;
 	use App\Services\CmdColor;
 	use App\Services\Command;
-
-	Console::WriteLine("################################################################################", CmdColor::RED);
-	Console::WriteLine("#                                Andph world                                   #", CmdColor::RED);
-	Console::WriteLine("################################################################################", CmdColor::RED);
+	////////////////////////////////////////////////////////////////// Tajtok je polovina
+	Console::WriteLine("################################################################################", CmdColor::GREEN);
+	Console::WriteLine("#                          Andph World - Initializing                          #", CmdColor::GREEN);
+	Console::WriteLine("################################################################################", CmdColor::GREEN);
+	Console::WriteLine("");
 	switch($argc)
 	{
 		case 1:
@@ -19,5 +20,6 @@
 			Command::Run(implode(" ", $argv));
 			break;
 	}
-
+	Console::WriteLine("\r\nAndph World terminating...");
+	
 	Console::Set(CmdColor::RESET_ALL);
