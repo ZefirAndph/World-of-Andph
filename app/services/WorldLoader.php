@@ -12,7 +12,7 @@
 	class WorldLoader implements IService
 	{
 		private string $m_dir;
-		public function __construct(string $basePath = null)
+		public function __construct(string | null $basePath = null)
 		{
 			$this->m_dir = $basePath ?? __DIR__ . DS . ".." . DS . "..";
 		}
@@ -33,6 +33,75 @@
 			return $data->Species;
 		}
 
+		public function BuildTimeline(): array
+		{
+			$data = [];
+			$this->nodeLocator($data,"history", $this->loadWorld());
+			$timeline = [];
+			foreach($data as $historyNode)
+			{
+				foreach($historyNode as $event)
+				{
+					if(!isset($timeline[$event->year]))
+						$timeline[$event->year] = [];
+						
+					$timeline[$event->year][] = $event->desc;
+				}
+			}
+
+			uksort($timeline, function($a, $b) 
+			{
+				// Rozparsování klíče
+				if(preg_match('/^(.+) E(\d+)$/', $a, $ma) 
+				&& preg_match('/^(.+) E(\d+)$/', $b, $mb))
+				{
+					$a_era = intval($ma[2]);
+					$b_era = intval($mb[2]);
+
+					$a_year = intval($ma[1]);
+					$b_year = intval($mb[1]);
+
+					if ($a_era !== $b_era)
+						return $a_era <=> $b_era;
+					
+					return $a_year <=> $b_year;
+				}
+				return true;
+			});
+
+			return $timeline;
+		}
+
+		public function GodsList(): array
+		{
+			$data = [];
+			$this->classLocator($data,"god", $this->loadWorld()->Entities);
+			$retv = [];
+			foreach($data as $god)
+			{
+				$retv[] = $god;
+			}
+
+			return $retv;
+		}
+
+		public function GetEntity(string $name, null|string $class = null): object|null
+		{
+			$data = $this->loadWorld();
+			foreach($data->Entities as $ent)
+			{
+				if(isset($ent->name) && $ent->name == $name)
+				{
+					if(!isset($class))
+						return $ent;
+
+					if($ent->class == $class)
+						return $ent;
+				}
+			}
+			return null;
+		}
+
 		// Internal functions
 		private function loadWorld(): object
 		{
@@ -41,9 +110,11 @@
 			if(file_exists($worldFile))
 				$objWorld->World = Tools::ArrToObj(Yaml::parse(file_get_contents($worldFile)));
 
-			$objWorld->Gods = [];
-			$objWorld->Herbals = [];
-			$objWorld->Species = [];
+			// $objWorld->Gods = [];
+			// $objWorld->Herbals = [];
+			//$objWorld->Species = [];
+			$objWorld->Other = [];
+			$objWorld->Entities = [];
 
 			foreach($this->listFiles($this->m_dir) as $file)
 			{
@@ -57,21 +128,12 @@
 
 				switch($node)
 				{
-					case "god":
-					case "bůh":
-						$objWorld->Gods[] = $data;
-						break;
-					case "herbal":
-						$objWorld->Herbals[] = $data;
-						break;
-					case "specie":
-						$objWorld->Species[] = $data;
-						break;
 					case "unk":
-						$objWorld->Errors[] = "File without defined type: $path";
+						$objWorld->Other[] = $data;
+						$objWorld->Errors[] = "File without defined node type: $path";
 						break;
 					default:
-						$objWorld->Errors[] = "Unknown node type: $node in file $path";
+						$objWorld->Entities[] = $data;	
 						break;
 				}
 			}
@@ -108,5 +170,35 @@
 				
 			}
 			return $retv;
+		}
+
+		private function nodeLocator(array &$retv, string $nodeName, object|array $startPoint): void
+		{
+			foreach($startPoint as $key => $value)
+			{
+				if($key == $nodeName)
+					$retv[] = $value;
+				else if(is_array($value))
+					$this->nodeLocator($retv, $nodeName, $value);
+				else if(is_object($value))
+					$this->nodeLocator($retv, $nodeName, $value);
+			}
+		}
+
+		private function classLocator(array &$retv, string $className, object|array $parentGroup): void
+		{
+			foreach($parentGroup as $key => $val)
+			{
+				if(isset($val->class) && $val->class == $className)
+					$retv[] = $val;
+			}
+
+			uksort($retv, function($a, $b) 
+			{
+				if($a->tier !== $b->tier)
+					return $a->tier <=> $b->tier;
+
+				return $a->name <=> $b->name;
+			});
 		}
 	}

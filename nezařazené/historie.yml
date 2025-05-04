@@ -1,8 +1,10 @@
 # tady jsou letopoičty jen z důvodu řazení událoství, tehdy ještě neplynul čas
-historie:
-  - rok: 10 E0
-    popis: Stvořitel vytváří Slunce
-  - rok: 20 E0
-    popis: Stvořitel vytváří Aer Aerg
-  - rok: 30 E0
-    popis: Stvořitel vytváří první sedmero
+history:
+  - year: ?? E0
+    desc: Stvořitel vytváří Slunce
+  - year: ?? E0
+    desc: Stvořitel vytváří Aer Aerg
+  - year: ?? E0
+    desc: Stvořitel vytváří první sedmero
+  - year: 975 E1
+    desc: Konec prvního věku

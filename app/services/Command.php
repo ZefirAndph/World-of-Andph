@@ -32,7 +32,20 @@
 				'terminate' => [$this, 'Exit'],
 				'vypni to' => [$this, 'Exit'],
 				'test' => [$this, 'Test'],
+
+				
 				'timeline' => [$this, 'TimeLine'],
+				
+				//[$this, 'Gods']
+				'gods' => [$this, 'Gods'],
+				'god' => [$this, 'Gods'],
+				
+				//[$this, 'Characters']
+				'char' => [$this, 'Characters'],
+				'chars' => [$this, 'Characters'],
+				'character' => [$this, 'Characters'],
+				'characters' => [$this, 'Characters'],
+				
 				'get races list' => [$this, 'GetRacesList'],
 			];
 
@@ -86,8 +99,10 @@
 		private function Test(Arguments $args): void 
 		{
 			$wl = $this->m_service->Get(WorldLoader::class);
-			$obj = new SObject($wl->GetAllData());
-			Console::WriteLine($obj->World->name);
+			foreach($wl->GetAllData()->Errors as $err)
+			{
+				Console::WriteLine($err);
+			}
 		}
 
 		private function GetRacesList(Arguments $args): void
@@ -104,6 +119,58 @@
 
 		private function Timeline(Arguments $args): void
 		{
+			$wl = $this->m_service->Get(WorldLoader::class);
+			Console::WriteLine(print_r($wl->BuildTimeline(), true));
+		}
+
+		private function Gods(Arguments $args): void
+		{
+			$wl = $this->m_service->Get(WorldLoader::class);
 			
+			$action = 0;
+			if($args->Get(0) != null) // asump name
+				$action = 1;
+			if($args->Get("name") != null)
+				$action = 1;
+
+			switch($action)
+			{
+				case 0: // list characters
+					break;
+				case 1: // char details
+					$name = $args->Get("name") ?? $args->Get(0);
+					$ent = $wl->GetEntity($name, 'god');
+					if($ent == null)
+						Console::WriteLine("God with name $name not found.");
+					else
+						Console::WriteLine(print_r($ent));
+					break;
+			}
+		}
+
+		private function Characters(Arguments $args)
+		{
+			$wl = $this->m_service->Get(WorldLoader::class);
+			
+			$action = 0;
+			if($args->Get(0) != null) // asump name
+				$action = 1;
+			if($args->Get("name") != null)
+				$action = 1;
+
+			switch($action)
+			{
+				case 0: // list characters
+					
+					break;
+				case 1: // char details
+					$name = $args->Get("name") ?? $args->Get(0);
+					$ent = $wl->GetEntity($name, 'character');
+					if($ent == null)
+						Console::WriteLine("Character with name $name not found.");
+					else
+						Console::WriteLine(print_r($ent));
+					break;
+			}
 		}
 	}
