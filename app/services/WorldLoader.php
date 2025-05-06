@@ -102,6 +102,18 @@
 			return null;
 		}
 
+		public function GetEntityByClass(string $className): array
+		{
+			$data = $this->loadWorld();
+			$retv = [];
+			foreach($data->Entities as $ent)
+			{
+				if($ent->class == $className)
+					$retv[] = $ent;
+			}
+			return $retv;
+		}
+
 		// Internal functions
 		private function loadWorld(): object
 		{

@@ -130,12 +130,18 @@
 			$action = 0;
 			if($args->Get(0) != null) // asump name
 				$action = 1;
+			
 			if($args->Get("name") != null)
 				$action = 1;
+
+			if($args->Has("list"))
+				$action = 0;
 
 			switch($action)
 			{
 				case 0: // list characters
+					$ent = $wl->GetEntityByClass('god');
+					Console::WriteLine(print_r($ent));
 					break;
 				case 1: // char details
 					$name = $args->Get("name") ?? $args->Get(0);
@@ -155,6 +161,7 @@
 			$action = 0;
 			if($args->Get(0) != null) // asump name
 				$action = 1;
+				
 			if($args->Get("name") != null)
 				$action = 1;
 
