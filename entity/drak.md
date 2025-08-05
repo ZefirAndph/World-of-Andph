@@ -5,15 +5,14 @@ names:
   aliases:
     - "Ohnivý ještěr"
     - "Létající bestie"
-kingdom: Animalia
-phylum: Chordata
-class: Reptilia
-order: Draconiformes         # Fantasy řád
-family: Draconidae           # Fantasy čeleď
-genus: Draco
-species: Draco ignis
-subspecies: Draco ignis occidentalis
 taxonomy:
+  kingdom: Anima
+  class: Creature
+  family: Dragonkin
+  specie: dragon
+  kind: rud
+
+perks:
   - magical
   - legendary
 tags:
