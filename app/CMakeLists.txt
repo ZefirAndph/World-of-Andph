@@ -4,12 +4,15 @@ project(baseWorldReader)
 
 set(CMAKE_CXX_STANDARD 20)
 
-set(SOURCES 
-    
-)
-
-add_executable(world ${SOURCES} src/gen_map.cpp)
-
 find_package(yaml-cpp CONFIG REQUIRED)
 
-target_link_libraries(world PRIVATE yaml-cpp::yaml-cpp)
+set(SOURCES 
+    src/world.cpp
+)
+
+
+add_executable(gen_map ${SOURCES} src/gen_map.cpp)
+
+target_link_libraries(gen_map PRIVATE 
+    yaml-cpp::yaml-cpp
+)
