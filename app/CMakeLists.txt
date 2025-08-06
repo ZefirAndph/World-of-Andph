@@ -1,13 +1,15 @@
 cmake_minimum_required(VERSION 3.30)
 
-project(baseWorldReader)
+project(baseWorldReader CXX)
 
 set(CMAKE_CXX_STANDARD 20)
 
 find_package(yaml-cpp CONFIG REQUIRED)
 
 set(SOURCES 
-    src/world.cpp
+    src/world_repository.cpp
+    src/world_service.cpp
+    src/shared_defines.cpp
 )
 
 

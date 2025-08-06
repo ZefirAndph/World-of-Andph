@@ -5,13 +5,7 @@ names:
   aliases:
     - "Ohnivý ještěr"
     - "Létající bestie"
-taxonomy:
-  kingdom: Anima
-  class: Creature
-  family: Dragonkin
-  specie: dragon
-  kind: rud
-
+taxonomy: Animalia/Draconis/Dragon
 perks:
   - magical
   - legendary
