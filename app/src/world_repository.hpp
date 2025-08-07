@@ -14,7 +14,8 @@ class WorldRepository {
         std::vector<sDocument> LoadNode(const std::string& id_path);
         sDocument LoadFile(const std::string& id_path);
     private:
-        std::filesystem::path create_path_from_id(std::string id_path);
+        std::filesystem::path create_path_from_id(const std::string& id_path);
+        std::string create_id_from_path(const std::filesystem::path& path);
 };
 
 #endif

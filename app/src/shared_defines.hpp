@@ -23,6 +23,7 @@ struct sMap {
 struct sDocument {
     std::string Id;
     std::string Content;
+    std::string HeaderRaw;
 
     sMap AsMap();
 };
