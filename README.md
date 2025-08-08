@@ -9,7 +9,7 @@ Po všech pokusech a ztrátách nakonec volím pro uložení informací o svět�
 
 ## Dokumentace struktur
 ### Entity
-
+<!-- 
 | Id | Česky | Význam / Popis |
 |:----------:|:-------:| --------------------------------------------------------- |
 | kingdom    | říše    | Nejvyšší úroveň – např. živočichové, rostliny             |
@@ -23,7 +23,7 @@ Po všech pokusech a ztrátách nakonec volím pro uložení informací o svět�
 
 ## Zpracovávání dat
 Všechny soubory podporují hlavičkový zápis (meta data) s obsahem. 
-Název souboru představuje jeho **ID** a rozlišujeme taky **DOC_ID** které představuje ID spolu s hiearchickou strukturou z rootu (např.: DOC_ID **event/grunmul** má vlastní ID **grunmul**).
+Název souboru představuje jeho **ID** a rozlišujeme taky **DOC_ID** které představuje ID spolu s hiearchickou strukturou z rootu (např.: DOC_ID **event/grunmul** má vlastní ID **grunmul**). -->
 ```md
 ---
 class: Drak
