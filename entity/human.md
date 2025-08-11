@@ -4,6 +4,7 @@ class: Creature
 family: Humanoid
 specie: Člověk
 kind: Císařský
+taxonomy: Animalia/Humanoid/Human
 ---
 class: specie
 name: Člověk
