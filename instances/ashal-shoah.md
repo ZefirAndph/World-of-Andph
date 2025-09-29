@@ -1,3 +1,4 @@
+---
 class: god
 name: Ashal'shoah
 spec: Elfové
@@ -47,3 +48,4 @@ tags:
   - oheň
   - fénix
   - logika
+---

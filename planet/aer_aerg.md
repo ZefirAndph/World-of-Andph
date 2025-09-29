@@ -5,7 +5,7 @@ coords:
 ---
 # Aer Aerg
 ```txt
-…však viset v prázdnotě nikdy mne nebavilo, a tak pod nohami mými, země pevná bude.
+"…však viset v prázdnotě nikdy mne nebavilo, a tak pod nohami mými, pevná země bude."
 Stvořitel, “Deník Stvořitele”, předmluva
 ```
 

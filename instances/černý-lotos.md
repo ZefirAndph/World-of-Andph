@@ -1,3 +1,4 @@
+---
 class: herbal
 name: Černý Lotos
 occurrence: 
@@ -16,3 +17,5 @@ effects:
     - květ
     - pyl
     - dužina
+---
+# Černý Lotos
