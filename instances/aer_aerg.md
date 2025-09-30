@@ -1,4 +1,5 @@
 ---
+class: cosmic_object
 name: Aer Aerg
 coords: 
     type: unk
