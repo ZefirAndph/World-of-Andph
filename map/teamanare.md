@@ -11,3 +11,4 @@ scale: 0.001 # 1 : 1000
 ---
 
 # Mapa celého světa Teamanare
+![Mapa](Teamanare.svg)
