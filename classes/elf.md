@@ -3,9 +3,7 @@ class: Elf
 namespace: race
 Vzhled:
   - Výška: 175-200 cm
-    Váha: 50-90 kg
-    Popis: 
-      
+    Váha: 50-90 kg    
 ---
 # Elfové
 Elfové jsou jedním z nejdéle žijících národů plochy. Bývala doba, kdy byli nesmrtelní.
