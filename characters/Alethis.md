@@ -1,5 +1,5 @@
 ---
-class: character
+class: elf
 name: Alethis
 stats:
   sil: 8
@@ -17,6 +17,7 @@ events:
 ---
 # Alethis
 Jeden z posledních nesmrtelných elfů, kteří se na ploše narodili. Jeho rod byl do exilu vykázán již dvě generace před Alethisovým narozením, za zločin zbabělství, kterým se provinil Alethisův praděd při válce s podsvětím.
+
 ## Narození
 Okolnosti jeho narození byli z astronomického hlediska velmi neobvyklé, ale to jeho rod v tu chvíli ještě nevěděl. Pro ně, to byl další den v exilu mezi lidmi. 
 
