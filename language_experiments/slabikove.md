@@ -6,3 +6,9 @@ jo
 nás
 et
 šš
+
+va
+g
+on
+br
+ej
