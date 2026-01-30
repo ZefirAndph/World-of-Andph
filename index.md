@@ -1,7 +1,7 @@
 ---
-name: Andph
-
+name: World of Andph
+layout: index
 
 ---
 
-# Andph
+# World of Andph

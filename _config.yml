@@ -1,0 +1,11 @@
+title: World of Andph
+author: Zefir Andph
+# theme: jekyll-theme-minimal
+# description: 
+
+
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /about.md
