@@ -1,4 +1,10 @@
 ---
+class: cosmic_object
+name: Teamanare
+coords: 
+    type: polar
+    
+    
 planet: teamanare
 base_file: Teamanare.svg
 size: 
@@ -12,3 +18,5 @@ scale: 0.001 # 1 : 1000
 
 # Mapa celého světa Teamanare
 ![Mapa](Teamanare.svg)
+
+# Plocha Teamanare
