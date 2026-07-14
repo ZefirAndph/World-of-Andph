@@ -78,3 +78,8 @@ I když jednotlivé Rody žijí obvykle odděleně, nastaly i případy, kdy se 
 Pokud jsou příslušníci jednoho Rodu početnější nebo civilizačně vyspělejší, stane se tento Rod dominantním a společenství jako celek se mu – minimálně navenek – připodobní. Elfové druhého Rodu ve vzájemných interakcích a otázkách zpravidla ustoupí a svůj charakter si zcela zachovají jen ve zbylých oblastech. Ve zdravých či vyspělých společenstvích je takové soužití poklidné a vzájemně prospěšné. V dobách úpadku se nicméně může stát, že se civilizačně méně vyspělý Rod ocitne ve výrazně podřadnějším postavení. Dominantní Rod nebývá ani tak otrokářský jako spíš povýšený a patronizující, avšak pro cizince je občas těžké poznat rozdíl.
 
 Pokud se smísí dvě stejně velké a vyspělé skupiny z různých Elfích rodů, vznikají unikátní společenství (či celé říše), která ani u stejných kombinací Rodů nejsou nikdy stejná. Jejich podoba bývá zvláštním spojením obou vzájemně se doplňujících a podporujících se Rodů. Legendy vypráví, že dlouhým soužitím může vzniknout zcela nový Elfí rod. Zda to je pravda, se dá jen těžko říct.
+
+
+
+### Vaerun
+Označení rodů, které byly za různé přečiny vykázaný z Terthu, je to slovo, jež nahrazuje jméno rodu, který byl odsouzen k vymazání ze společnosti a paměti národa. Tito se nesmějí vrátit do Terthu. Nesmějí používat původní rodové jméno. Pokud překročí hranice Tertu, budou loveni, zadrženi, opakovaně vykázání, či vězněni, nebo dokonce popraveni. To podle dalšího soudu.
