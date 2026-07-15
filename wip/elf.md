@@ -41,18 +41,6 @@ rozšíření vlivu. Ať už jsou nesmrtelní či smrtelní, jejich životní ce
 je poznamenána neustálým bojem, nelítostností a neochvějným odhodláním 
 potlačit jakoukoli slabost.
 
-### Vyhnanci
-Vyhnanci jsou elfové, kteří se ocitli na okraji svého vlastního lidu. 
-Jsou to ti, které společnost vyhnala – nebo je nedokázala zabít – a ti, 
-kteří odešli včas, aby se vyhnuli neúprosné disciplíně a nemilosrdné 
-ideologii národa. Jejich existence je poznamenána odcizením od pradávných
-hodnot, avšak u některých přežívá i zbytková úcta k tradicím, což je však
-v ostřejím světě elfů považováno za slabost. Ti, kdo zůstali oddani svým
-kořenům, se stále snaží připomínat dávnou hrdost a bojují s vlastním 
-osudem jako ztrapněnou připomínkou toho, co ztratili. Jiní se však plně 
-ponořili do lidské reality, vzdali se elfy vymezených pravidel a přijali 
-jen brutální pravdu světa, kde přežití závisí na tvrdosti a pragmatismu. 
-Vyhnanci tak představují dvojí tvář odpadníků – rebelů, kteří odmítli
-bezpodmínečnou poslušnost, a zároveň trýznivou připomínku minulosti, 
-kterou se jejich společenství snaží neustále ze své paměti vymazat.
+### Vyhnanci (Vaerun)
+Vyhnanci jsou elfové, kteří se ocitli na okraji svého vlastního lidu. Jsou to ti, které společnost vyhnala – nebo je nedokázala zabít – a ti, kteří odešli včas, aby se vyhnuli neúprosné disciplíně a nemilosrdné ideologii národa. Jejich existence je poznamenána odcizením od pradávných hodnot, avšak u některých přežívá i zbytková úcta k tradicím, což je však v ostřejím světě elfů považováno za slabost. Ti, kdo zůstali oddani svým kořenům, se stále snaží připomínat dávnou hrdost a bojují s vlastním  osudem jako ztrapněnou připomínkou toho, co ztratili. Jiní se však plně ponořili do lidské reality, vzdali se elfy vymezených pravidel a přijali jen brutální pravdu světa, kde přežití závisí na vrdosti a pragmatismu. Vyhnanci tak představují dvojí tvář odpadníků – rebelů, kteří odmítli bezpodmínečnou poslušnost, a zároveň trýznivou připomínku minulosti, kterou se jejich společenství snaží neustále ze své paměti vymazat.
 
