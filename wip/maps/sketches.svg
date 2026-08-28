@@ -1,2 +1,27 @@
-<svg xmlns="">
+<!-- Grids 50x50 -->
+<svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <marker id="dot" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4">
+            <circle cx="5" cy="5" r="4" fill="red"/>
+        </marker>
+
+        <symbol id="city" viewBox="-10 -10 20 20" refX="0" refY="0" width="20" height="20">
+            <circle cx="0" cy="0" r="10" fill="red"/>
+        </symbol>
+        <symbol id="cross" viewBox="-10 -10 20 20">
+           <line x1="-10" y1="10" x2="10" y2="-10" stroke="blue" stroke-width=".1"/>
+           <line x1="-10" y1="-10" x2="10" y2="10" stroke="blue" stroke-width=".1"/>
+        </symbol>
+    </defs>
+    <rect x="0" y="0" width="50" height="50" fill="black"/>
+
+
+    <use href="#city" x="0" y="0"/>
+    <use href="#cross" x="0" y="0"/>
+
+    <polyline points="5,45 15,10 30,30 45,5"
+              fill="none" stroke="red" stroke-width="1"
+              marker-start="url(#dot)"
+              marker-mid="url(#dot)"
+              marker-end="url(#dot)"/>
 </svg>
