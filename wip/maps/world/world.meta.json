@@ -1,0 +1,12 @@
+{
+  "anchor-krkoska": {
+    "label": "Krkoška",
+    "lazySrc": "details/krkoska.svg",
+    "lazyMinZoom": 3
+  },
+  "anchor-dubovec": {
+    "label": "Dubovec",
+    "lazySrc": "details/dubovec.svg",
+    "lazyMinZoom": 3
+  }
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<title>SVG mapa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: #1a1a1a;
+  }
+  #map {
+    width: 100%;
+    height: 100%;
+    background: #1a1a1a;
+  }
+  /* Vypnout rozostření při zoomu (ostré hrany pro SVG/pixel art) */
+  .leaflet-image-layer {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+  // Cesta k SVG souboru položenému vedle této HTML stránky
+  const SVG_PATH = './map.svg';
+
+  // Nejdřív zjistíme skutečné rozměry SVG, aby mapa měla správný poměr stran
+  const probe = new Image();
+  probe.onload = function () {
+    initMap(probe.naturalWidth || probe.width, probe.naturalHeight || probe.height);
+  };
+  probe.onerror = function () {
+    console.error('Nepodařilo se načíst ' + SVG_PATH + ' – zkontroluj, že soubor leží vedle HTML stránky.');
+    document.getElementById('map').innerHTML =
+      '<p style="color:#fff;font-family:sans-serif;padding:2rem;">' +
+      'Nepodařilo se načíst soubor <code>' + SVG_PATH + '</code>.<br>' +
+      'Ujisti se, že leží ve stejné složce jako tato HTML stránka.</p>';
+  };
+  probe.src = SVG_PATH;
+
+  function initMap(width, height) {
+    // Jednoduchý (nezeměpisný) souřadný systém: 1 jednotka = 1 pixel obrázku
+    const map = L.map('map', {
+      crs: L.CRS.Simple,
+      minZoom: -5,
+      maxZoom: 5,
+      zoomSnap: 0.25,
+      attributionControl: false
+    });
+
+    // Souřadnice: [0,0] vlevo dole, [výška, šířka] vpravo nahoře
+    const bounds = [[0, 0], [height, width]];
+
+    L.imageOverlay(SVG_PATH, bounds).addTo(map);
+
+    map.fitBounds(bounds);
+    // volitelně: omezit posouvání mimo obrázek
+    map.setMaxBounds(bounds.map ? bounds : bounds);
+  }
+</script>
+
+</body>
+</html>
