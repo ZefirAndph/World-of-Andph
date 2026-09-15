@@ -1,3 +1,4 @@
 ---
-ability: Strength
+doctype: skill
+ability: strength
 ---

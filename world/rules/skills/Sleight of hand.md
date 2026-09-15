@@ -1,3 +1,4 @@
 ---
-ability: Dexterity
+doctype: skill
+ability: dexterity
 ---

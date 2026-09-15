@@ -1,3 +1,4 @@
 ---
-ability: Wisdom
+doctype: skill
+ability: wisdom
 ---

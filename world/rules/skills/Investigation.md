@@ -1,3 +1,4 @@
 ---
-ability: Intelligence
+doctype: skill
+ability: intelligence
 ---

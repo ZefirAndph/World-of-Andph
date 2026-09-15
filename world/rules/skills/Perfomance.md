@@ -1,3 +1,4 @@
 ---
-ability: Charisma
+doctype: skill
+ability: charisma
 ---
