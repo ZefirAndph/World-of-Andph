@@ -27,5 +27,8 @@ echo "==> Instaluji závislosti"
 "$VENV_DIR/bin/pip" install -r "$REPO_ROOT/requirements.txt"
 
 echo ""
-echo "Hotovo. Aktivuj prostředí pomocí:"
-echo "    source .venv/bin/activate"
+echo "Ještě aktivuji prostředí."
+
+source .venv/bin/activate
+
+echo "Hotovo! vypneš to s 'deactivate'"

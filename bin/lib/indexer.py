@@ -1,6 +1,7 @@
 import json
 import time
 from pathlib import Path
+from .datatype import DataFile
 import frontmatter
 import yaml
 
@@ -13,7 +14,24 @@ class Indexer:
         self._index: dict[tuple[str, str], Path] = {}
         self._loaded = False
     
-    def get(self, doctype: str, entity_id: str) -> Path | None:
+    def get(self, doctype: str, eid: str) -> DataFile | None:
+        path = self.get_path(doctype, eid)
+        if path is None:
+            return None
+        dfile = DataFile()
+        dfile.path = path
+
+        if path.suffix == ".md":
+            fm = frontmatter.load(path)
+            dfile.meta = fm.metadata
+            dfile.cont = fm.content
+
+        # ToDo: implement yaml + .loc.md
+        
+        return dfile
+
+
+    def get_path(self, doctype: str, entity_id: str) -> Path | None:
         if not self._loaded:
             self.reload()
         return self._index.get((doctype, entity_id))
