@@ -24,32 +24,6 @@ abilities:
   int: 17
   wis: 12
   cha: 10
-saving-throws:
-  str: {value: -1, }
-  dex: {value:  3, }
-  con: {value:  2, }
-  int: {value:  5, proficient: true}
-  wis: {value:  3, proficient: true}
-  cha: {value:  0, }
-skills:
-  acrobatics:       { proficient:  3, ability: dex}
-  animal-handling:  { proficient:  1, ability: wis}
-  arcana:           { proficient:  5, ability: int, active: true}
-  athletics:        { proficient: -1, ability: str}
-  deception:        { proficient:  2, ability: cha, active: true}
-  history:          { proficient:  5, ability: int, active: true}
-  insight:          { proficient:  1, ability: wis}
-  intimidation:     { proficient:  0, ability: cha}
-  investigation:    { proficient:  5, ability: int, active: true}
-  medicine:         { proficient:  1, ability: wis}
-  nature:           { proficient:  3, ability: int}
-  perception:       { proficient:  3, ability: wis, active: true}
-  perfomance:       { proficient:  0, ability: cha}
-  persuasion:       { proficient:  0, ability: cha}
-  regilion:         { proficient:  3, ability: int}
-  sheight-of-hand:  { proficient:  3, ability: dex}
-  stealth:          { proficient:  3, ability: dex}
-  survival:         { proficient:  1, ability: wis}
 proficiency:
   - weapon-dagger
   - weapon-dart
@@ -60,6 +34,11 @@ proficiency:
   - language-elvish
   - language-infernal
   - language-shadow-cant
+  - skill-arcana
+  - skill-deception
+  - skill-history
+  - skill-investigation
+  - skill-perception
 traits:
   - ritual-casting
   - arcane-recovery
@@ -71,7 +50,6 @@ traits:
   - researcher
 inventory:
   dagger: 1
-
 ---
 # Aelvaeren
 ## TLDR

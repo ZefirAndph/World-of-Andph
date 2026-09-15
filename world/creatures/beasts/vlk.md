@@ -1,4 +1,6 @@
 ---
+doctype: creature
+type: [beast]
 Class: Creature
 Source: DnD 5E p159 - Wolf
 Subclass: Medium beast

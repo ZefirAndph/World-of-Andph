@@ -1,21 +1,20 @@
 ---
-Class: Race
-Subclass: 
-Stats:
-  Dex: 2
-Speed: 30 ft
-Lifespan: 750
-Size:
-  Class: Medium
-  Height: 5-6 ft
-Languages:
-  Common: s+w
-  Elvish: s+w
-Traits:
-  - Name: Darkvision
-  - Name: Keen sences
-  - Name: Trance
-
+doctype: race
+size: 
+  type: medium
+  min: 4'6''
+  max: 6'6''
+speed: 30
+abilities:
+  dex: 2
+traits:
+  - darkvision
+  - keen-senses
+  - fey-ancestry
+  - trance
+proficiency:
+  - language-common
+  - language-elvish
 
 ---
 
