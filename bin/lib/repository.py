@@ -17,3 +17,7 @@ class Repository:
     @property
     def cache_dir(self) -> Path:
         return self.root / ".cache"
+
+    @property
+    def root_dir(self) -> Path:
+        return self.root
